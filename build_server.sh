@@ -344,6 +344,7 @@ if [ "$CLUSTER_TOKEN" = "" ]; then
   exit 1
 fi
 
+# read command line options
 OVERWRITE_GAME_CONFIG=false
 DONT_START=false
 LAUNCH=false
@@ -383,6 +384,7 @@ then
   sudo useradd -m steam -s /usr/bin/bash
 fi
 
+# set up service
 write_dst_startup_script
 write_dst_service_file
 sudo systemctl daemon-reload

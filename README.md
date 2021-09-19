@@ -54,10 +54,14 @@ Usage: build_server.sh [-o] [-d] [-l]
 
 Game configuration is stored in `/home/steam/.klei/DoNotStarveTogether/MyDediServer/`
 
+### Server Behaviour
+
 The following files control server behaviour
  * cluster.ini
  * server.ini
  * server.ini
+
+### Custom World Generation
 
 The following files control world generation
  * Master/worldgenoverride.lua
@@ -69,11 +73,17 @@ To generate custom worlds:
  * modify `worldgenoverride.lua` files
  * start server `sudo systemctl start dst`
 
-To Add Mods, edit:
- * Master/modoverrides.lua
- * Caves/modoverrides.lua
+### Mods
+
+To Add Mods
+ * edit
+   * Master/modoverrides.lua
+   * Caves/modoverrides.lua
+ * then restart server `sudo systemctl restart dst`
+
+### Game Admins
 
 To add game Admins:
-* Add Klei User IDs to `adminlist.txt`, one per line
-
-Klei User IDs are in the form KU_xxxxxxxx, and can be found by visiting https://accounts.klei.com/account/info
+ * Fetch Klei User IDs from [Klei Account Page](https://accounts.klei.com/account/info). Klei User IDs are in the form `KU_xxxxxxxx`
+ * Add Klei User IDs to `adminlist.txt`, one per line
+ * then restart server `sudo systemctl restart dst`

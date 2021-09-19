@@ -202,6 +202,8 @@ cluster_name = $GAME_NAME
 cluster_intention = $GAME_INTENTION
 cluster_password = $GAME_PASSWORD
 
+tick_rate = 60
+
 [MISC]
 console_enabled = true
 

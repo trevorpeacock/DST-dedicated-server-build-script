@@ -5,6 +5,9 @@
 # Set up DST server
 # -----------------
 #
+# Author: Trevor Peacock
+# https://github.com/trevorpeacock/DST-dedicated-server-build-script
+#
 # Create and EC2 Instance with the following settings
 # Ubuntu Server 20.04 LTS (ami-0567f647e75c7bc05)
 # t3a.medium
@@ -69,6 +72,9 @@ function write_dst_startup_script
 FILE_NAME=/home/steam/run_dedicated_servers.sh
 sudo tee $FILE_NAME > /dev/null <<EOT
 #!/bin/bash
+
+# Original script from https://accounts.klei.com/assets/gamesetup/linux/run_dedicated_servers.sh
+# Posted by "255" on klei forums https://forums.kleientertainment.com/forums/topic/64441-dedicated-server-quick-setup-guide-linux/
 
 steamcmd_dir="\$HOME/steamcmd"
 install_dir="\$HOME/dontstarvetogether_dedicated_server"
